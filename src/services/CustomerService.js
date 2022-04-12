@@ -1,4 +1,5 @@
 
+// Fetch data in this class example comes from the public/data folder
 export class CustomerService {
 
     getCustomersSmall() {
