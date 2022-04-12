@@ -12,7 +12,8 @@ import { Calendar } from 'primereact/calendar';
 import { MultiSelect } from 'primereact/multiselect';
 import { Slider } from 'primereact/slider';
 import { CustomerService } from '../services/CustomerService';
-// import './DataTableDemo.css';
+import '../styles/PrimeReact.css';
+import '../styles/DataTableDemo.css';
 // import { ProductService } from '../services/ProductService';
 
 const DataTableBasicDemo = () => {
@@ -211,6 +212,7 @@ const DataTableBasicDemo = () => {
                     <Column field="status" header="Status" sortable filterMenuStyle={{ width: '14rem' }} style={{ minWidth: '10rem' }} body={statusBodyTemplate} filter filterElement={statusFilterTemplate} />
                     <Column field="activity" header="Activity" sortable showFilterMatchModes={false} style={{ minWidth: '10rem' }} body={activityBodyTemplate} filter filterElement={activityFilterTemplate} />
                     <Column headerStyle={{ width: '4rem', textAlign: 'center' }} bodyStyle={{ textAlign: 'center', overflow: 'visible' }} body={actionBodyTemplate} />
+
                 </DataTable>
             </div>
         </div>

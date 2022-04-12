@@ -18,7 +18,8 @@ import DataTableBasicDemo from "./components/datatable.component";
 import EventBus from "./common/EventBus";
 import Header from "./components/header.component";
 
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+// check theme name here => https://github.com/primefaces/primereact/tree/master/public/themes
+import "primereact/resources/themes/lara-light-purple/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 
