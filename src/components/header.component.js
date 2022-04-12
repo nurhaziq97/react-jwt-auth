@@ -1,11 +1,20 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import authService from "../services/auth.service";
 
 
 const Header = (props) => {
     const { currentUser, showModeratorBoard, showAdminBoard } = props;
     
-    
+    const logOut = () => {
+        authService.logout();
+        this.setState({
+          showModeratorBoard: false,
+          showAdminBoard: false,
+          currentUser: undefined,
+        });
+      }
+
     return (
     <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
@@ -57,7 +66,7 @@ const Header = (props) => {
             </Link>
             </li>
             <li className="nav-item">
-            <a href="/login" className="nav-link" onClick={this.logOut}>
+            <a href="/login" className="nav-link" onClick={logOut}>
                 LogOut
             </a>
             </li>

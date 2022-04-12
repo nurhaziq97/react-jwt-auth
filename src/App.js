@@ -26,7 +26,7 @@ import "primeicons/primeicons.css";                                //icons
 class App extends Component {
   constructor(props) {
     super(props);
-    this.logOut = this.logOut.bind(this);
+    // this.logOut = this.logOut.bind(this);
 
     this.state = {
       showModeratorBoard: false,
@@ -53,15 +53,6 @@ class App extends Component {
 
   componentWillUnmount() {
     EventBus.remove("logout");
-  }
-
-  logOut() {
-    AuthService.logout();
-    this.setState({
-      showModeratorBoard: false,
-      showAdminBoard: false,
-      currentUser: undefined,
-    });
   }
 
   render() {
